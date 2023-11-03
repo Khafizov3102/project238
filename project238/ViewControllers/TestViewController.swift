@@ -11,24 +11,114 @@ class TestViewController: UIViewController {
 
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var checkWordTF: UITextField!
+    @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet weak var questionPV: UIProgressView!
+    
+    var words = Word.getDictionary()
+    var incorrectWordsList: [Word] = []
+    var questionСounter = 0
+    var currentWord = ""
+    var numberOfQuestions = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
 
-        // Do any additional setup after loading the view.
+        wordLabel.text = "Начать тест"
+        
+        questionPV.progressTintColor = .green
+        questionPV.setProgress(0, animated: false)
+        
+        title = "Тест"
+        
+        setupButton(
+            button: checkButton,
+            title: "Начать тест",
+            backColor: .darkGray
+        )
     }
     
-    @IBAction func checkButtonPressed() {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if questionСounter == numberOfQuestions + 1 {
+            true
+        } else {
+            false
+        }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
-    */
-
+    
+    @IBAction func checkButtonPressed(_ sender: UIButton) {
+        if questionСounter < 14 {
+            setupButton(
+                button: checkButton,
+                title: "Проверить",
+                backColor: .cyan
+            )
+            checkWordTF.isHidden = false
+        } else {
+            setupButton(
+                button: checkButton,
+                title: "Завершить",
+                backColor: .green
+                )
+        }
+        
+        currentWord = checkWordTF.text ?? ""
+        checkTranslation()
+        
+        if questionСounter < numberOfQuestions {
+            wordLabel.text = words[questionСounter].translation
+            title = "\(questionСounter + 1)/\(numberOfQuestions)"
+        } else {
+            title = "Проверь себя"
+        }
+        
+        questionСounter += 1
+        checkWordTF.text = ""
+        questionPV.setProgress(Float(questionСounter) / Float(numberOfQuestions), animated: true)
+    }
+    
+    
+    private func checkTranslation() {
+        if questionСounter < numberOfQuestions {
+            if words[questionСounter].word.lowercased() != currentWord.lowercased() {
+                incorrectWordsList.append(words[questionСounter])
+            }
+        }
+    }
+    
+    private func setupButton(button: UIButton, title: String, backColor: UIColor) {
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = backColor
+        button.layer.cornerRadius = 10
+    }
+    
+    private func setupAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let saveAction = UIAlertAction(title: "Сохранить", style: .default) { _ in
+            let numberOfQuestionsTF = alert.textFields?.first
+            if let numberOfQuestions = Int(numberOfQuestionsTF?.text ?? "") {
+                if numberOfQuestions > self.words.count {
+                    self.numberOfQuestions = self.words.count
+                } else {
+                    self.numberOfQuestions = numberOfQuestions
+                }
+            }
+        }
+        alert.addTextField { _ in }
+        alert.addAction(saveAction)
+        
+        present(alert, animated: true)
+    }
 }
+
