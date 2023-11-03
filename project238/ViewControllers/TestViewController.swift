@@ -36,6 +36,7 @@ class TestViewController: UIViewController {
             title: "Начать тест",
             backColor: .darkGray
         )
+        words.shuffle()
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -52,7 +53,7 @@ class TestViewController: UIViewController {
     }
     
     @IBAction func checkButtonPressed(_ sender: UIButton) {
-        if questionСounter < 14 {
+        if questionСounter < numberOfQuestions - 1 {
             setupButton(
                 button: checkButton,
                 title: "Проверить",
