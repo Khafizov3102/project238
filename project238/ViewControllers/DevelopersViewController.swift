@@ -8,22 +8,31 @@
 import UIKit
 
 class DevelopersViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    @IBOutlet weak var nameDeveloperOne: UILabel!
+    @IBOutlet weak var nameDeveloperTwo: UILabel!
+    @IBOutlet weak var nameDeveloperThree: UILabel!
+    @IBOutlet weak var nameDeveloperFour: UILabel!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var jobTitleFour: UILabel!
+    @IBOutlet weak var jobTitleThree: UILabel!
+    @IBOutlet weak var jobTitleTwo: UILabel!
+    @IBOutlet weak var jobTitleOne: UILabel!
+        
+        let developers = ["Хафизов Денис", "Баранов Александр", "Степанян Грайр", "Саталкин Кирилл"]
+        let jobTitle = ["Руководитель проекта", "Разработик", "Стоял рядом и не мешался"]
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            nameDeveloperOne.text = developers[0]
+            nameDeveloperTwo.text = developers[1]
+            nameDeveloperThree.text = developers[2]
+            nameDeveloperFour.text = developers[3]
+            
+            jobTitleOne.text = jobTitle[0]
+            jobTitleTwo.text = jobTitle[1]
+            jobTitleThree.text = jobTitle[1]
+            jobTitleFour.text = jobTitle[2]
+        }
     }
-    */
 
-}

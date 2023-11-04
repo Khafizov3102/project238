@@ -452,22 +452,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="WpA-ud-wAU">
-                                <rect key="frame" x="76.666666666666686" y="99" width="240" height="140"/>
+                                <rect key="frame" x="-123.66666666666669" y="99" width="640.33333333333348" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MB5-8I-Ic4">
-                                        <rect key="frame" x="95.999999999999986" y="0.0" width="47.666666666666671" height="27.666666666666668"/>
+                                        <rect key="frame" x="296.33333333333331" y="0.0" width="47.666666666666686" height="27.666666666666668"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Должность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khb-U3-kHJ">
-                                        <rect key="frame" x="75.999999999999972" y="30.666666666666657" width="87.666666666666657" height="20.333333333333329"/>
+                                        <rect key="frame" x="276.33333333333331" y="30.666666666666657" width="87.666666666666686" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OvI-4m-lhJ">
-                                        <rect key="frame" x="0.0" y="54" width="240" height="86"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="2023-11-02 21.58.08" translatesAutoresizingMaskIntoConstraints="NO" id="OvI-4m-lhJ">
+                                        <rect key="frame" x="0.0" y="54" width="640.33333333333337" height="86"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -475,22 +475,22 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="I02-Mw-RB6">
-                                <rect key="frame" x="76.666666666666686" y="269" width="240" height="140"/>
+                                <rect key="frame" x="-123.66666666666669" y="269" width="640.33333333333348" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slg-3Y-JiB">
-                                        <rect key="frame" x="95.999999999999986" y="0.0" width="47.666666666666671" height="27.666666666666668"/>
+                                        <rect key="frame" x="296.33333333333331" y="0.0" width="47.666666666666686" height="27.666666666666668"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Должность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJV-jB-Xzm">
-                                        <rect key="frame" x="75.999999999999972" y="30.666666666666686" width="87.666666666666657" height="20.333333333333329"/>
+                                        <rect key="frame" x="276.33333333333331" y="30.666666666666686" width="87.666666666666686" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Dg-4s-5fJ">
-                                        <rect key="frame" x="0.0" y="54" width="240" height="86"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="2023-11-02 21.59.10" translatesAutoresizingMaskIntoConstraints="NO" id="9Dg-4s-5fJ">
+                                        <rect key="frame" x="0.0" y="54" width="640.33333333333337" height="86"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -498,22 +498,22 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="7nY-zB-Bah">
-                                <rect key="frame" x="76.666666666666686" y="439" width="240" height="140"/>
+                                <rect key="frame" x="-403.66666666666669" y="439" width="1200.3333333333333" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hs-Jz-4fv">
-                                        <rect key="frame" x="95.999999999999986" y="0.0" width="47.666666666666671" height="27.666666666666668"/>
+                                        <rect key="frame" x="576.33333333333337" y="0.0" width="47.666666666666629" height="27.666666666666668"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Должность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibF-sJ-eLH">
-                                        <rect key="frame" x="75.999999999999972" y="30.666666666666686" width="87.666666666666657" height="20.333333333333329"/>
+                                        <rect key="frame" x="556.33333333333337" y="30.666666666666686" width="87.666666666666629" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y3N-4w-Sj2">
-                                        <rect key="frame" x="0.0" y="54" width="240" height="86"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="1661927971_j-37" translatesAutoresizingMaskIntoConstraints="NO" id="Y3N-4w-Sj2">
+                                        <rect key="frame" x="0.0" y="54" width="1200.3333333333333" height="86"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -521,22 +521,22 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="SbS-Jz-LrE">
-                                <rect key="frame" x="76.666666666666686" y="609" width="240" height="140"/>
+                                <rect key="frame" x="-123.66666666666669" y="609" width="640.33333333333348" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgO-5c-oYF">
-                                        <rect key="frame" x="95.999999999999986" y="0.0" width="47.666666666666671" height="27.666666666666668"/>
+                                        <rect key="frame" x="296.33333333333331" y="0.0" width="47.666666666666686" height="27.666666666666668"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Должность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xkk-kN-l6i">
-                                        <rect key="frame" x="75.999999999999972" y="30.666666666666629" width="87.666666666666657" height="20.333333333333329"/>
+                                        <rect key="frame" x="276.33333333333331" y="30.666666666666629" width="87.666666666666686" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-PL-Sr4">
-                                        <rect key="frame" x="0.0" y="54" width="240" height="86"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="2023-11-02 21.59.32" translatesAutoresizingMaskIntoConstraints="NO" id="lF7-PL-Sr4">
+                                        <rect key="frame" x="0.0" y="54" width="640.33333333333337" height="86"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -558,6 +558,16 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Команда" image="person.3.fill" catalog="system" id="xDo-WM-g6U"/>
+                    <connections>
+                        <outlet property="jobTitleFour" destination="Xkk-kN-l6i" id="rT2-dO-xfR"/>
+                        <outlet property="jobTitleOne" destination="Khb-U3-kHJ" id="HpE-FJ-7X4"/>
+                        <outlet property="jobTitleThree" destination="ibF-sJ-eLH" id="OW3-YS-eNV"/>
+                        <outlet property="jobTitleTwo" destination="bJV-jB-Xzm" id="JRM-uu-X1a"/>
+                        <outlet property="nameDeveloperFour" destination="AgO-5c-oYF" id="5Lw-vb-jCO"/>
+                        <outlet property="nameDeveloperOne" destination="MB5-8I-Ic4" id="FmL-Yj-wrd"/>
+                        <outlet property="nameDeveloperThree" destination="6hs-Jz-4fv" id="osS-Bp-exf"/>
+                        <outlet property="nameDeveloperTwo" destination="slg-3Y-JiB" id="5NY-k0-Lb4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXy-up-66J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -621,6 +631,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1661927971_j-37" width="1200" height="960"/>
+        <image name="2023-11-02 21.58.08" width="640" height="640"/>
+        <image name="2023-11-02 21.59.10" width="640" height="640"/>
+        <image name="2023-11-02 21.59.32" width="640" height="640"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="person.3.fill" catalog="system" width="128" height="66"/>
         <image name="textformat.abc" catalog="system" width="128" height="61"/>
