@@ -20,24 +20,12 @@ final class TestViewController: UIViewController {
     private var questionСounter = 0
     private var currentWord = ""
     private var numberOfQuestions = 0
+    private var startTestAgain = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
-
-        wordLabel.text = "Начать тест"
-        
-        questionPV.progressTintColor = .green
-        questionPV.setProgress(0, animated: false)
-        
-        title = "Тест"
-        
-        setupButton(
-            button: checkButton,
-            title: "Начать тест",
-            backColor: .darkGray
-        )
-        words.shuffle()
+        setupUI()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -59,6 +47,18 @@ final class TestViewController: UIViewController {
     }
     
     @IBAction func checkButtonPressed(_ sender: UIButton) {
+        if startTestAgain {
+            setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
+            startTestAgain = false
+            
+            setupButton(
+                button: checkButton,
+                title: "Проверить",
+                backColor: .cyan
+            )
+            checkWordTF.isHidden = false
+        }
+        
         if questionСounter < numberOfQuestions - 1 {
             setupButton(
                 button: checkButton,
@@ -89,6 +89,42 @@ final class TestViewController: UIViewController {
         questionPV.setProgress(Float(questionСounter) / Float(numberOfQuestions), animated: true)
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        setupUI()
+        setupButton(
+            button: checkButton,
+            title: "Пройти тест еще раз",
+            backColor: .lightGray
+        )
+        startTestAgain = true
+        resetTest()
+    }
+    
+    private func resetTest() {
+        incorrectWordsList = []
+        incorrectAnswers = []
+        questionСounter = 0
+        currentWord = ""
+        numberOfQuestions = 0
+    }
+    
+    private func setupUI() {
+        wordLabel.text = "Начать тест"
+        
+        questionPV.progressTintColor = .green
+        questionPV.setProgress(0, animated: false)
+        
+        title = "Тест"
+        
+        setupButton(
+            button: checkButton,
+            title: "Начать тест",
+            backColor: .darkGray
+        )
+        words.shuffle()
+        
+        checkWordTF.isHidden = true
+    }
     
     private func checkTranslation() {
         if questionСounter < numberOfQuestions {

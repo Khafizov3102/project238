@@ -13,6 +13,9 @@ class WordsTableViewController: UITableViewController {
         super.viewDidLoad()
 //        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+    }
 }
 
 // MARK: - TableViewDataSource
