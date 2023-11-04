@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TestViewController: UIViewController {
+final class TestViewController: UIViewController {
 
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var checkWordTF: UITextField!
@@ -15,10 +15,11 @@ class TestViewController: UIViewController {
     @IBOutlet weak var questionPV: UIProgressView!
     
     var words = Word.getDictionary()
-    var incorrectWordsList: [Word] = []
-    var questionСounter = 0
-    var currentWord = ""
-    var numberOfQuestions = 0
+    private var incorrectWordsList: [Word] = []
+    private var incorrectAnswers: [String] = []
+    private var questionСounter = 0
+    private var currentWord = ""
+    private var numberOfQuestions = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,11 @@ class TestViewController: UIViewController {
             backColor: .darkGray
         )
         words.shuffle()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultTVC = segue.destination as? ResultTableViewController else { return }
+        resultTVC.incorrectWordsList = incorrectWordsList
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
