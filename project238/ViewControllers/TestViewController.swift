@@ -15,6 +15,7 @@ final class TestViewController: UIViewController {
     @IBOutlet weak var questionPV: UIProgressView!
     
     var words: [Word] = []
+    
     private var incorrectWordsList: [Word] = []
     private var incorrectAnswers: [String] = []
     private var questionСounter = 0
@@ -23,8 +24,12 @@ final class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
+        
         setupUI()
+        
+        numberOfQuestions = 4
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -80,7 +85,7 @@ final class TestViewController: UIViewController {
         currentWord = checkWordTF.text ?? ""
         
         if questionСounter < numberOfQuestions {
-            wordLabel.text = words[questionСounter].translation
+            wordLabel.text = words[questionСounter + 1].translation
             title = "\(questionСounter + 1)/\(numberOfQuestions)"
         } else {
             title = "Проверь себя"
@@ -124,7 +129,7 @@ final class TestViewController: UIViewController {
             title: "Начать тест",
             backColor: .darkGray
         )
-//        words.shuffle()
+        words.shuffle()
         
         checkWordTF.isHidden = true
     }
