@@ -21,6 +21,7 @@ final class TestViewController: UIViewController {
     private var questionСounter = 0
     private var currentWord = ""
     private var numberOfQuestions = 0
+    private var startAgain = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,6 @@ final class TestViewController: UIViewController {
         setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
         
         setupUI()
-        
-        numberOfQuestions = 4
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -96,6 +95,12 @@ final class TestViewController: UIViewController {
         checkWordTF.text = ""
         
         checkTranslation()
+        
+        if startAgain {
+            startAgain = false
+        } else {
+            questionСounter += 1
+        }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -106,6 +111,7 @@ final class TestViewController: UIViewController {
             backColor: .lightGray
         )
         resetTest()
+        startAgain = true
     }
     
     private func resetTest() {
@@ -140,7 +146,6 @@ final class TestViewController: UIViewController {
                 incorrectWordsList.append(words[questionСounter])
             }
         }
-        questionСounter += 1
     }
     
     private func setupButton(button: UIButton, title: String, backColor: UIColor) {
