@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0E0CFE982AF432840004466F /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0CFE972AF432840004466F /* Word.swift */; };
-		2D0A49542AF3300B0025372C /* WordInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0A49532AF3300B0025372C /* WordInfoTableViewCell.swift */; };
-		2D0A49562AF3327F0025372C /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0A49552AF3327F0025372C /* ResultTableViewCell.swift */; };
 		2D0A49592AF332E20025372C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0A49582AF332E20025372C /* DataStore.swift */; };
 		2D77D4192AF2CD1D0058479C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77D4182AF2CD1D0058479C /* AppDelegate.swift */; };
 		2D77D41B2AF2CD1D0058479C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77D41A2AF2CD1D0058479C /* SceneDelegate.swift */; };
-		2D77D41D2AF2CD1D0058479C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77D41C2AF2CD1D0058479C /* ViewController.swift */; };
 		2D77D4202AF2CD1D0058479C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D77D41E2AF2CD1D0058479C /* Main.storyboard */; };
 		2D77D4222AF2CD1E0058479C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D77D4212AF2CD1E0058479C /* Assets.xcassets */; };
 		2D77D4252AF2CD1E0058479C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D77D4232AF2CD1E0058479C /* LaunchScreen.storyboard */; };
@@ -23,18 +20,14 @@
 		2D77D4372AF32B2B0058479C /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77D4362AF32B2B0058479C /* ResultTableViewController.swift */; };
 		2D77D4392AF32B710058479C /* WordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77D4382AF32B710058479C /* WordsTableViewController.swift */; };
 		2D77D43B2AF32BA80058479C /* WordInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77D43A2AF32BA80058479C /* WordInfoViewController.swift */; };
-		2D77D43D2AF32BCE0058479C /* AddWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77D43C2AF32BCE0058479C /* AddWordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E0CFE972AF432840004466F /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		2D0A49532AF3300B0025372C /* WordInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordInfoTableViewCell.swift; sourceTree = "<group>"; };
-		2D0A49552AF3327F0025372C /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		2D0A49582AF332E20025372C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		2D77D4152AF2CD1D0058479C /* project238.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project238.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D77D4182AF2CD1D0058479C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D77D41A2AF2CD1D0058479C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2D77D41C2AF2CD1D0058479C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D77D41F2AF2CD1D0058479C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D77D4212AF2CD1E0058479C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D77D4242AF2CD1E0058479C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,7 +38,6 @@
 		2D77D4362AF32B2B0058479C /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		2D77D4382AF32B710058479C /* WordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsTableViewController.swift; sourceTree = "<group>"; };
 		2D77D43A2AF32BA80058479C /* WordInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordInfoViewController.swift; sourceTree = "<group>"; };
-		2D77D43C2AF32BCE0058479C /* AddWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,15 +57,6 @@
 				0E0CFE972AF432840004466F /* Word.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		2D0A49522AF32FAC0025372C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2D0A49532AF3300B0025372C /* WordInfoTableViewCell.swift */,
-				2D0A49552AF3327F0025372C /* ResultTableViewCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		2D0A49572AF332AD0025372C /* Services */ = {
@@ -105,7 +88,6 @@
 			children = (
 				0E0CFE962AF432660004466F /* Models */,
 				2D0A49572AF332AD0025372C /* Services */,
-				2D0A49522AF32FAC0025372C /* Views */,
 				2D77D42F2AF2CE550058479C /* Resources */,
 				2D77D42E2AF2CE220058479C /* Storyboards */,
 				2D77D42D2AF2CDA40058479C /* SupportingFiles */,
@@ -117,14 +99,12 @@
 		2D77D42C2AF2CD7E0058479C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2D77D41C2AF2CD1D0058479C /* ViewController.swift */,
 				2D77D4302AF32AA50058479C /* TabBarController.swift */,
 				2D77D4322AF32ADD0058479C /* DevelopersViewController.swift */,
 				2D77D4342AF32AFF0058479C /* TestViewController.swift */,
 				2D77D4362AF32B2B0058479C /* ResultTableViewController.swift */,
 				2D77D4382AF32B710058479C /* WordsTableViewController.swift */,
 				2D77D43A2AF32BA80058479C /* WordInfoViewController.swift */,
-				2D77D43C2AF32BCE0058479C /* AddWordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -229,17 +209,13 @@
 			files = (
 				2D0A49592AF332E20025372C /* DataStore.swift in Sources */,
 				0E0CFE982AF432840004466F /* Word.swift in Sources */,
-				2D77D43D2AF32BCE0058479C /* AddWordViewController.swift in Sources */,
-				2D77D41D2AF2CD1D0058479C /* ViewController.swift in Sources */,
 				2D77D43B2AF32BA80058479C /* WordInfoViewController.swift in Sources */,
 				2D77D4312AF32AA50058479C /* TabBarController.swift in Sources */,
 				2D77D4192AF2CD1D0058479C /* AppDelegate.swift in Sources */,
-				2D0A49542AF3300B0025372C /* WordInfoTableViewCell.swift in Sources */,
 				2D77D41B2AF2CD1D0058479C /* SceneDelegate.swift in Sources */,
 				2D77D4372AF32B2B0058479C /* ResultTableViewController.swift in Sources */,
 				2D77D4352AF32AFF0058479C /* TestViewController.swift in Sources */,
 				2D77D4332AF32ADD0058479C /* DevelopersViewController.swift in Sources */,
-				2D0A49562AF3327F0025372C /* ResultTableViewCell.swift in Sources */,
 				2D77D4392AF32B710058479C /* WordsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

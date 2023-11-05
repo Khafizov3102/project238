@@ -7,28 +7,173 @@
 
 import UIKit
 
-class TestViewController: UIViewController {
-
+final class TestViewController: UIViewController {
+    
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var checkWordTF: UITextField!
+    @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet weak var questionPV: UIProgressView!
+    
+    var words: [Word] = []
+    
+    private var incorrectWordsList: [Word] = []
+    private var incorrectAnswers: [String] = []
+    private var questionСounter = 0
+    private var currentWord = ""
+    private var numberOfQuestions = 0
+    private var startAgain = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
+        
+        setupUI()
     }
     
-    @IBAction func checkButtonPressed() {
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let resultTVC = segue.destination as? ResultTableViewController else { return }
+        resultTVC.incorrectWordsList = incorrectWordsList
+        resultTVC.hidesBottomBarWhenPushed = true
+        resultTVC.navigationItem.hidesBackButton = true
     }
-    */
-
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if questionСounter == numberOfQuestions + 1 {
+            true
+        } else {
+            false
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    @IBAction func checkButtonPressed(_ sender: UIButton) {
+        if checkButton.titleLabel?.text == "Пройти тест еще раз" {
+            setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
+            
+            setupButton(
+                button: checkButton,
+                title: "Начать",
+                backColor: .black
+            )
+                        
+            checkWordTF.isHidden = false
+        }
+        
+        if questionСounter == numberOfQuestions - 1 {
+            setupButton(
+                button: checkButton,
+                title: "Завершить",
+                backColor: .green
+                )
+        } else {
+            setupButton(
+                button: checkButton,
+                title: "Проверить",
+                backColor: .cyan
+            )
+            checkWordTF.isHidden = false
+        }
+        
+        currentWord = checkWordTF.text ?? ""
+        
+        if questionСounter < numberOfQuestions {
+            wordLabel.text = words[questionСounter + 1].translation
+            title = "\(questionСounter + 1)/\(numberOfQuestions)"
+        } else {
+            checkWordTF.isHidden = true
+            title = "Проверь себя"
+        }
+        
+        questionPV.setProgress(Float(questionСounter + 1) / Float(numberOfQuestions), animated: true)
+        
+        checkWordTF.text = ""
+        
+        checkTranslation()
+        
+        if startAgain {
+            startAgain = false
+        } else {
+            questionСounter += 1
+        }
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        setupUI()
+        setupButton(
+            button: checkButton,
+            title: "Пройти тест еще раз",
+            backColor: .lightGray
+        )
+        resetTest()
+        startAgain = true
+    }
+    
+    private func resetTest() {
+        incorrectWordsList = []
+        incorrectAnswers = []
+        questionСounter = 0
+        currentWord = ""
+        numberOfQuestions = 0
+    }
+    
+    private func setupUI() {
+        wordLabel.text = "Начать тест"
+        
+        questionPV.progressTintColor = .green
+        questionPV.setProgress(0, animated: false)
+        
+        title = "Тест"
+        
+        setupButton(
+            button: checkButton,
+            title: "Начать тест",
+            backColor: .darkGray
+        )
+        words.shuffle()
+        
+        checkWordTF.isHidden = true
+    }
+    
+    private func checkTranslation() {
+        if questionСounter < numberOfQuestions {
+            if words[questionСounter].word.lowercased() != currentWord.lowercased() {
+                incorrectWordsList.append(words[questionСounter])
+            }
+        }
+    }
+    
+    private func setupButton(button: UIButton, title: String, backColor: UIColor) {
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = backColor
+        button.layer.cornerRadius = 10
+    }
+    
+    private func setupAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let saveAction = UIAlertAction(title: "Сохранить", style: .default) { _ in
+            let numberOfQuestionsTF = alert.textFields?.first
+            if let numberOfQuestions = Int(numberOfQuestionsTF?.text ?? "") {
+                if numberOfQuestions > self.words.count {
+                    self.numberOfQuestions = self.words.count
+                } else {
+                    self.numberOfQuestions = numberOfQuestions
+                }
+            }
+        }
+        alert.addTextField { _ in }
+        alert.addAction(saveAction)
+        
+        present(alert, animated: true)
+    }
 }
