@@ -44,21 +44,7 @@ extension ResultTableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? ResultTableViewCell
-//        cell?.wordLabel.text = "Кот"
-//        cell?.correctTranslationLabel.text = "Cat"
-//        cell?.incorrectЕranslationLabel.text = "Cot"
-//
-//        return cell
-//    }
-    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         "Кол-во ошибок: \(incorrectWordsList.count). Повторите слова:"
     }
-    
-   
-//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        110
-//    }
 }

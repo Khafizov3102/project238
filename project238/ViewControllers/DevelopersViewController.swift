@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DevelopersViewController: UIViewController {
+final class DevelopersViewController: UIViewController {
     @IBOutlet weak var nameDeveloperOne: UILabel!
     @IBOutlet weak var nameDeveloperTwo: UILabel!
     @IBOutlet weak var nameDeveloperThree: UILabel!
@@ -17,22 +17,31 @@ class DevelopersViewController: UIViewController {
     @IBOutlet weak var jobTitleThree: UILabel!
     @IBOutlet weak var jobTitleTwo: UILabel!
     @IBOutlet weak var jobTitleOne: UILabel!
+    
+    private let developers = [
+        "Хафизов Денис",
+        "Баранов Александр",
+        "Степанян Грайр",
+        "Саталкин Кирилл"
+    ]
+    private let jobTitle = [
+        "Руководитель проекта",
+        "Разработик",
+        "Стоял рядом и не мешался"
+    ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        let developers = ["Хафизов Денис", "Баранов Александр", "Степанян Грайр", "Саталкин Кирилл"]
-        let jobTitle = ["Руководитель проекта", "Разработик", "Стоял рядом и не мешался"]
+        nameDeveloperOne.text = developers[0]
+        nameDeveloperTwo.text = developers[1]
+        nameDeveloperThree.text = developers[2]
+        nameDeveloperFour.text = developers[3]
         
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            nameDeveloperOne.text = developers[0]
-            nameDeveloperTwo.text = developers[1]
-            nameDeveloperThree.text = developers[2]
-            nameDeveloperFour.text = developers[3]
-            
-            jobTitleOne.text = jobTitle[0]
-            jobTitleTwo.text = jobTitle[1]
-            jobTitleThree.text = jobTitle[1]
-            jobTitleFour.text = jobTitle[2]
-        }
+        jobTitleOne.text = jobTitle[0]
+        jobTitleTwo.text = jobTitle[1]
+        jobTitleThree.text = jobTitle[1]
+        jobTitleFour.text = jobTitle[2]
     }
+}
 

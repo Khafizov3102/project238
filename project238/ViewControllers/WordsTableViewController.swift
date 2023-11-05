@@ -9,22 +9,18 @@ import UIKit
 
 final class WordsTableViewController: UITableViewController {
     var words: [Word] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "segue" else { return }
         guard let wordInfoVC = segue.destination as? WordInfoViewController else { return }
         wordInfoVC.word = sender as? Word
     }
-   
+    
 }
 
 // MARK: - TableViewDataSource
 extension WordsTableViewController {
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
@@ -43,8 +39,6 @@ extension WordsTableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
@@ -57,6 +51,4 @@ extension WordsTableViewController {
         
         return cell
     }
-    
-
 }

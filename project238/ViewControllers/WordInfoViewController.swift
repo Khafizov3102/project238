@@ -15,20 +15,11 @@ final class WordInfoViewController: UIViewController {
     
     var word: Word!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
         
         wordLabel.text = word.word
         translateLabel.text = word.translation
         contextLabel.text = word.description
-            
-        
     }
-    
-
-  
-
 }

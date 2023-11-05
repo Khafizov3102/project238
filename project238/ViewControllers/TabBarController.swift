@@ -9,7 +9,7 @@ import UIKit
 
 final class TabBarController: UITabBarController {
     
-    let words = Word.getDictionary()
+    private let words = Word.getDictionary()
     
     override func viewDidLoad() {
         super.viewDidLoad()
