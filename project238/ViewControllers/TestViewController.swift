@@ -85,10 +85,11 @@ final class TestViewController: UIViewController {
             wordLabel.text = words[questionСounter + 1].translation
             title = "\(questionСounter + 1)/\(numberOfQuestions)"
         } else {
+            checkWordTF.isHidden = true
             title = "Проверь себя"
         }
         
-        questionPV.setProgress(Float(questionСounter) / Float(numberOfQuestions), animated: true)
+        questionPV.setProgress(Float(questionСounter + 1) / Float(numberOfQuestions), animated: true)
         
         checkWordTF.text = ""
         

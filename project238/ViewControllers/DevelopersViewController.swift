@@ -26,8 +26,7 @@ final class DevelopersViewController: UIViewController {
     ]
     private let jobTitle = [
         "Руководитель проекта",
-        "Разработик",
-        "Стоял рядом и не мешался"
+        "Разработик"
     ]
     
     override func viewDidLoad() {
@@ -41,7 +40,7 @@ final class DevelopersViewController: UIViewController {
         jobTitleOne.text = jobTitle[0]
         jobTitleTwo.text = jobTitle[1]
         jobTitleThree.text = jobTitle[1]
-        jobTitleFour.text = jobTitle[2]
+        jobTitleFour.text = jobTitle[1]
     }
 }
 
