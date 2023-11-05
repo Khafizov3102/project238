@@ -82,7 +82,7 @@ final class TestViewController: UIViewController {
         currentWord = checkWordTF.text ?? ""
         
         if questionСounter < numberOfQuestions {
-            wordLabel.text = words[questionСounter + 1].translation
+            wordLabel.text = words[questionСounter].translation
             title = "\(questionСounter + 1)/\(numberOfQuestions)"
         } else {
             checkWordTF.isHidden = true
