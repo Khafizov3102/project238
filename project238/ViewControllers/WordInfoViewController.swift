@@ -13,21 +13,22 @@ class WordInfoViewController: UIViewController {
     @IBOutlet weak var translateLabel: UILabel!
     @IBOutlet weak var contextLabel: UILabel!
     
+    var word: Word!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+    
+        
+        wordLabel.text = word.word
+        translateLabel.text = word.translation
+        contextLabel.text = word.description
+            
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
