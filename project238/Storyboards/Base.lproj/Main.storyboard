@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="85" id="5wI-Mp-pa9" customClass="WordInfoTableViewCell" customModule="project238" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="85" id="5wI-Mp-pa9">
                                 <rect key="frame" x="0.0" y="50" width="393" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wI-Mp-pa9" id="6bq-Kg-cmq">
@@ -55,10 +55,6 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="sbs-b0-Nkh" secondAttribute="bottom" id="axg-gp-Y1E"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="translateLabel" destination="104-Lc-pTW" id="thH-16-OIZ"/>
-                                    <outlet property="wordLabel" destination="QWW-kQ-7ot" id="w6f-II-MvH"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -231,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="110" id="WSr-gc-n6T" customClass="ResultTableViewCell" customModule="project238" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="110" id="WSr-gc-n6T">
                                 <rect key="frame" x="0.0" y="50" width="393" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WSr-gc-n6T" id="8Ue-2q-frJ">
@@ -290,11 +286,6 @@
                                         <constraint firstAttribute="trailing" secondItem="jeF-J0-s26" secondAttribute="trailing" constant="16" id="f5B-mM-BcF"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="correctTranslationLabel" destination="Nju-9s-3hm" id="V8x-qf-YhB"/>
-                                    <outlet property="incorrectЕranslationLabel" destination="iDZ-BJ-yms" id="klk-xR-xzK"/>
-                                    <outlet property="wordLabel" destination="8Gw-0W-bOH" id="Jou-5e-OdN"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

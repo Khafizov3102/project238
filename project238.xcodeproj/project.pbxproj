@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0E0CFE982AF432840004466F /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0CFE972AF432840004466F /* Word.swift */; };
-		2D0A49542AF3300B0025372C /* WordInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0A49532AF3300B0025372C /* WordInfoTableViewCell.swift */; };
-		2D0A49562AF3327F0025372C /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0A49552AF3327F0025372C /* ResultTableViewCell.swift */; };
 		2D0A49592AF332E20025372C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0A49582AF332E20025372C /* DataStore.swift */; };
 		2D77D4192AF2CD1D0058479C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77D4182AF2CD1D0058479C /* AppDelegate.swift */; };
 		2D77D41B2AF2CD1D0058479C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77D41A2AF2CD1D0058479C /* SceneDelegate.swift */; };
@@ -26,8 +24,6 @@
 
 /* Begin PBXFileReference section */
 		0E0CFE972AF432840004466F /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		2D0A49532AF3300B0025372C /* WordInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordInfoTableViewCell.swift; sourceTree = "<group>"; };
-		2D0A49552AF3327F0025372C /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		2D0A49582AF332E20025372C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		2D77D4152AF2CD1D0058479C /* project238.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project238.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D77D4182AF2CD1D0058479C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,15 +59,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2D0A49522AF32FAC0025372C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2D0A49532AF3300B0025372C /* WordInfoTableViewCell.swift */,
-				2D0A49552AF3327F0025372C /* ResultTableViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		2D0A49572AF332AD0025372C /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +88,6 @@
 			children = (
 				0E0CFE962AF432660004466F /* Models */,
 				2D0A49572AF332AD0025372C /* Services */,
-				2D0A49522AF32FAC0025372C /* Views */,
 				2D77D42F2AF2CE550058479C /* Resources */,
 				2D77D42E2AF2CE220058479C /* Storyboards */,
 				2D77D42D2AF2CDA40058479C /* SupportingFiles */,
@@ -226,12 +212,10 @@
 				2D77D43B2AF32BA80058479C /* WordInfoViewController.swift in Sources */,
 				2D77D4312AF32AA50058479C /* TabBarController.swift in Sources */,
 				2D77D4192AF2CD1D0058479C /* AppDelegate.swift in Sources */,
-				2D0A49542AF3300B0025372C /* WordInfoTableViewCell.swift in Sources */,
 				2D77D41B2AF2CD1D0058479C /* SceneDelegate.swift in Sources */,
 				2D77D4372AF32B2B0058479C /* ResultTableViewController.swift in Sources */,
 				2D77D4352AF32AFF0058479C /* TestViewController.swift in Sources */,
 				2D77D4332AF32ADD0058479C /* DevelopersViewController.swift in Sources */,
-				2D0A49562AF3327F0025372C /* ResultTableViewCell.swift in Sources */,
 				2D77D4392AF32B710058479C /* WordsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
