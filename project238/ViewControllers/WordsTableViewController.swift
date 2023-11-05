@@ -7,8 +7,8 @@
 
 import UIKit
 
-class WordsTableViewController: UITableViewController {
-    var words = Word.getDictionary()
+final class WordsTableViewController: UITableViewController {
+    var words: [Word] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

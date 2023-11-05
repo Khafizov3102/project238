@@ -8,22 +8,27 @@
 import UIKit
 
 final class TabBarController: UITabBarController {
-
+    
+    let words = Word.getDictionary()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        transferData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func transferData() {
+        guard let viewControllers else { return }
+        
+        viewControllers.forEach {
+            if let navigationVC = $0 as? UINavigationController {
+                let WordsVC = navigationVC.topViewController
+                if let WordsListVC = WordsVC as? WordsTableViewController {
+                    WordsListVC.words = words
+                }
+                if let TestVC = WordsVC as? TestViewController {
+                    TestVC.words = words
+                }
+            }
+        }
     }
-    */
-
 }

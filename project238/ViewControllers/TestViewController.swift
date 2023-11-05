@@ -14,13 +14,12 @@ final class TestViewController: UIViewController {
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var questionPV: UIProgressView!
     
-    var words = Word.getDictionary()
+    var words: [Word] = []
     private var incorrectWordsList: [Word] = []
     private var incorrectAnswers: [String] = []
     private var questionСounter = 0
     private var currentWord = ""
     private var numberOfQuestions = 0
-    private var startTestAgain = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +35,7 @@ final class TestViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if questionСounter == numberOfQuestions + 1 {
+        if questionСounter == numberOfQuestions {
             true
         } else {
             false
@@ -49,7 +48,7 @@ final class TestViewController: UIViewController {
     }
     
     @IBAction func checkButtonPressed(_ sender: UIButton) {
-        if startTestAgain {
+        if checkButton.titleLabel?.text == "Пройти тест еще раз" {
             setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
             
             setupButton(
@@ -61,7 +60,6 @@ final class TestViewController: UIViewController {
             wordLabel.text = words.first?.translation
             
             checkWordTF.isHidden = false
-            startTestAgain = false
         }
         
         if questionСounter == numberOfQuestions - 1 {
@@ -80,7 +78,6 @@ final class TestViewController: UIViewController {
         }
         
         currentWord = checkWordTF.text ?? ""
-        checkTranslation()
         
         if questionСounter < numberOfQuestions {
             wordLabel.text = words[questionСounter].translation
@@ -92,6 +89,8 @@ final class TestViewController: UIViewController {
         questionPV.setProgress(Float(questionСounter) / Float(numberOfQuestions), animated: true)
         
         checkWordTF.text = ""
+        
+        checkTranslation()
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -101,7 +100,6 @@ final class TestViewController: UIViewController {
             title: "Пройти тест еще раз",
             backColor: .lightGray
         )
-        startTestAgain = true
         resetTest()
     }
     
@@ -132,12 +130,10 @@ final class TestViewController: UIViewController {
     }
     
     private func checkTranslation() {
-        if questionСounter < numberOfQuestions ||
-            startTestAgain {
+        if questionСounter < numberOfQuestions {
             if words[questionСounter].word.lowercased() != currentWord.lowercased() {
                 incorrectWordsList.append(words[questionСounter])
             }
-            startTestAgain = false
         }
         questionСounter += 1
     }

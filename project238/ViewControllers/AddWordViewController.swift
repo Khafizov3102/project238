@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddWordViewController: UIViewController {
+final class AddWordViewController: UIViewController {
     @IBOutlet weak var newWordTF: UITextField!
     @IBOutlet weak var translateNewWordTF: UITextField!
     @IBOutlet weak var newWordContextTF: UITextField!

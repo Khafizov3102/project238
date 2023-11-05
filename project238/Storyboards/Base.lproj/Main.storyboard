@@ -236,8 +236,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какое-то описание" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFo-cB-KcS">
-                                <rect key="frame" x="120.00000000000001" y="553" width="153.33333333333337" height="20.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какое-то описание" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFo-cB-KcS">
+                                <rect key="frame" x="16" y="553" width="361" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -247,12 +247,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="MMO-oY-HxJ" firstAttribute="leading" secondItem="ghu-sw-Xxd" secondAttribute="leading" constant="16" id="1Xg-ge-O49"/>
+                            <constraint firstItem="yFo-cB-KcS" firstAttribute="leading" secondItem="HDZ-nl-DNp" secondAttribute="leading" constant="16" id="6oJ-cn-q4Y"/>
                             <constraint firstItem="WHi-vs-W61" firstAttribute="centerX" secondItem="HDZ-nl-DNp" secondAttribute="centerX" id="7lD-Mp-fgt"/>
+                            <constraint firstAttribute="trailing" secondItem="yFo-cB-KcS" secondAttribute="trailing" constant="16" id="Dhe-6V-6WB"/>
                             <constraint firstItem="ghu-sw-Xxd" firstAttribute="trailing" secondItem="MMO-oY-HxJ" secondAttribute="trailing" constant="16" id="E6U-N8-N4n"/>
                             <constraint firstItem="UuD-CO-dEi" firstAttribute="leading" secondItem="ghu-sw-Xxd" secondAttribute="leading" constant="16" id="JkA-HX-9mb"/>
                             <constraint firstItem="yFo-cB-KcS" firstAttribute="top" secondItem="WHi-vs-W61" secondAttribute="bottom" constant="30" id="OEH-Ff-1Zc"/>
                             <constraint firstItem="MMO-oY-HxJ" firstAttribute="top" secondItem="ghu-sw-Xxd" secondAttribute="top" constant="100" id="RH4-Ls-THw"/>
-                            <constraint firstItem="yFo-cB-KcS" firstAttribute="centerX" secondItem="HDZ-nl-DNp" secondAttribute="centerX" id="jou-PK-WPL"/>
                             <constraint firstItem="ghu-sw-Xxd" firstAttribute="trailing" secondItem="UuD-CO-dEi" secondAttribute="trailing" constant="16" id="rUN-5w-Ppz"/>
                             <constraint firstItem="UuD-CO-dEi" firstAttribute="top" secondItem="MMO-oY-HxJ" secondAttribute="bottom" constant="80" id="sWM-Rk-EXD"/>
                             <constraint firstItem="WHi-vs-W61" firstAttribute="top" secondItem="UuD-CO-dEi" secondAttribute="bottom" constant="80" id="zDY-Fb-e7q"/>

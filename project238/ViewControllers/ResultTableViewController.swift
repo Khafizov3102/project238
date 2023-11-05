@@ -29,8 +29,8 @@ extension ResultTableViewController {
         let word = incorrectWordsList[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
-        content.text = word.word
-        content.secondaryText = word.translation
+        content.text = word.translation
+        content.secondaryText = word.word
         cell.contentConfiguration = content
         
         return cell

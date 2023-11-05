@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WordInfoViewController: UIViewController {
+final class WordInfoViewController: UIViewController {
 
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var translateLabel: UILabel!
