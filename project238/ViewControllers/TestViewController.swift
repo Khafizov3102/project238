@@ -39,7 +39,7 @@ final class TestViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if questionСounter == numberOfQuestions {
+        if questionСounter == numberOfQuestions + 1 {
             true
         } else {
             false
@@ -57,12 +57,10 @@ final class TestViewController: UIViewController {
             
             setupButton(
                 button: checkButton,
-                title: "Проверить",
-                backColor: .cyan
+                title: "Начать",
+                backColor: .black
             )
-            
-            wordLabel.text = words.first?.translation
-            
+                        
             checkWordTF.isHidden = false
         }
         
