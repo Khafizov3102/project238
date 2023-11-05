@@ -73,12 +73,6 @@ final class TestViewController: UIViewController {
         } else {
             setupButton(
                 button: checkButton,
-                title: "Завершить",
-                backColor: .green
-                )
-            
-            setupButton(
-                button: checkButton,
                 title: "Проверить",
                 backColor: .cyan
             )
@@ -95,9 +89,9 @@ final class TestViewController: UIViewController {
             title = "Проверь себя"
         }
         
-        questionСounter += 1
-        checkWordTF.text = ""
         questionPV.setProgress(Float(questionСounter) / Float(numberOfQuestions), animated: true)
+        
+        checkWordTF.text = ""
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -138,12 +132,14 @@ final class TestViewController: UIViewController {
     }
     
     private func checkTranslation() {
-        if questionСounter < numberOfQuestions || startTestAgain {
+        if questionСounter < numberOfQuestions ||
+            startTestAgain {
             if words[questionСounter].word.lowercased() != currentWord.lowercased() {
                 incorrectWordsList.append(words[questionСounter])
             }
             startTestAgain = false
         }
+        questionСounter += 1
     }
     
     private func setupButton(button: UIButton, title: String, backColor: UIColor) {
@@ -176,4 +172,3 @@ final class TestViewController: UIViewController {
         present(alert, animated: true)
     }
 }
-
