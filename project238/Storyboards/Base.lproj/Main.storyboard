@@ -161,7 +161,6 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="sbs-b0-Nkh" secondAttribute="bottom" id="axg-gp-Y1E"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <connections>
                                     <outlet property="translateLabel" destination="104-Lc-pTW" id="thH-16-OIZ"/>
                                     <outlet property="wordLabel" destination="QWW-kQ-7ot" id="w6f-II-MvH"/>
@@ -398,7 +397,6 @@
                                         <constraint firstAttribute="trailing" secondItem="jeF-J0-s26" secondAttribute="trailing" constant="16" id="f5B-mM-BcF"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <connections>
                                     <outlet property="correctTranslationLabel" destination="Nju-9s-3hm" id="V8x-qf-YhB"/>
                                     <outlet property="incorrectЕranslationLabel" destination="iDZ-BJ-yms" id="klk-xR-xzK"/>
@@ -641,9 +639,6 @@
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -31,6 +31,8 @@ final class TestViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultTVC = segue.destination as? ResultTableViewController else { return }
         resultTVC.incorrectWordsList = incorrectWordsList
+        resultTVC.hidesBottomBarWhenPushed = true
+        resultTVC.navigationItem.hidesBackButton = true
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -49,7 +51,31 @@ final class TestViewController: UIViewController {
     @IBAction func checkButtonPressed(_ sender: UIButton) {
         if startTestAgain {
             setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
+            
+            setupButton(
+                button: checkButton,
+                title: "Проверить",
+                backColor: .cyan
+            )
+            
+            wordLabel.text = words.first?.translation
+            
+            checkWordTF.isHidden = false
             startTestAgain = false
+        }
+        
+        if questionСounter == numberOfQuestions - 1 {
+            setupButton(
+                button: checkButton,
+                title: "Завершить",
+                backColor: .green
+                )
+        } else {
+            setupButton(
+                button: checkButton,
+                title: "Завершить",
+                backColor: .green
+                )
             
             setupButton(
                 button: checkButton,
@@ -57,21 +83,6 @@ final class TestViewController: UIViewController {
                 backColor: .cyan
             )
             checkWordTF.isHidden = false
-        }
-        
-        if questionСounter < numberOfQuestions - 1 {
-            setupButton(
-                button: checkButton,
-                title: "Проверить",
-                backColor: .cyan
-            )
-            checkWordTF.isHidden = false
-        } else {
-            setupButton(
-                button: checkButton,
-                title: "Завершить",
-                backColor: .green
-                )
         }
         
         currentWord = checkWordTF.text ?? ""
@@ -121,16 +132,17 @@ final class TestViewController: UIViewController {
             title: "Начать тест",
             backColor: .darkGray
         )
-        words.shuffle()
+//        words.shuffle()
         
         checkWordTF.isHidden = true
     }
     
     private func checkTranslation() {
-        if questionСounter < numberOfQuestions {
+        if questionСounter < numberOfQuestions || startTestAgain {
             if words[questionСounter].word.lowercased() != currentWord.lowercased() {
                 incorrectWordsList.append(words[questionСounter])
             }
+            startTestAgain = false
         }
     }
     
