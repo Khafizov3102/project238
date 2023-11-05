@@ -8,112 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Добавить новое слово-->
-        <scene sceneID="uaF-m1-PyS">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="uJv-7i-2k4" customClass="AddWordViewController" customModule="project238" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oQQ-FI-igF">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFk-gK-yGn">
-                                <rect key="frame" x="161.33333333333334" y="196" width="70.333333333333343" height="27.666666666666657"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rP3-lK-kvt">
-                                <rect key="frame" x="16" y="253.66666666666663" width="361" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Перевод" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="275-c3-TqD">
-                                <rect key="frame" x="149.33333333333334" y="337.66666666666669" width="94.666666666666657" height="27.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2k-7G-Xhu">
-                                <rect key="frame" x="16" y="395.33333333333331" width="361" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контекст" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg1-ZR-Hig">
-                                <rect key="frame" x="150.33333333333334" y="479.33333333333331" width="92.333333333333343" height="27.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tOf-9u-YZc">
-                                <rect key="frame" x="16" y="537" width="361" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="oQl-qt-s99"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xDp-4g-hYs">
-                                <rect key="frame" x="16" y="797.66666666666663" width="361" height="34.333333333333371"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKF-AY-j7r">
-                                        <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="34.333333333333336"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Отменить">
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="cancelButtonPressed" destination="uJv-7i-2k4" eventType="touchUpInside" id="pvN-t9-JFV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMY-8l-Owj">
-                                        <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="34.333333333333336"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Сохранить">
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="saveButtonPressed" destination="uJv-7i-2k4" eventType="touchUpInside" id="ybW-63-MIM"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="YbR-20-zL1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="tOf-9u-YZc" firstAttribute="top" secondItem="Bg1-ZR-Hig" secondAttribute="bottom" constant="30" id="5gH-cm-Kfi"/>
-                            <constraint firstItem="YbR-20-zL1" firstAttribute="trailing" secondItem="rP3-lK-kvt" secondAttribute="trailing" constant="16" id="8gS-dA-lok"/>
-                            <constraint firstItem="tOf-9u-YZc" firstAttribute="leading" secondItem="YbR-20-zL1" secondAttribute="leading" constant="16" id="IMG-dS-ULO"/>
-                            <constraint firstItem="275-c3-TqD" firstAttribute="top" secondItem="rP3-lK-kvt" secondAttribute="bottom" constant="50" id="IVJ-FL-7yx"/>
-                            <constraint firstItem="v2k-7G-Xhu" firstAttribute="leading" secondItem="YbR-20-zL1" secondAttribute="leading" constant="16" id="Kqg-Dq-3lG"/>
-                            <constraint firstItem="275-c3-TqD" firstAttribute="centerX" secondItem="oQQ-FI-igF" secondAttribute="centerX" id="Mgv-ZE-Kuh"/>
-                            <constraint firstItem="YbR-20-zL1" firstAttribute="trailing" secondItem="v2k-7G-Xhu" secondAttribute="trailing" constant="16" id="NJI-Rp-lfu"/>
-                            <constraint firstItem="v2k-7G-Xhu" firstAttribute="top" secondItem="275-c3-TqD" secondAttribute="bottom" constant="30" id="Ue7-ph-atq"/>
-                            <constraint firstItem="YbR-20-zL1" firstAttribute="trailing" secondItem="tOf-9u-YZc" secondAttribute="trailing" constant="16" id="Xqi-jD-IJ4"/>
-                            <constraint firstItem="YbR-20-zL1" firstAttribute="trailing" secondItem="xDp-4g-hYs" secondAttribute="trailing" constant="16" id="aa5-VV-Jm0"/>
-                            <constraint firstItem="Bg1-ZR-Hig" firstAttribute="centerX" secondItem="oQQ-FI-igF" secondAttribute="centerX" id="bcG-8i-0eX"/>
-                            <constraint firstItem="IFk-gK-yGn" firstAttribute="top" secondItem="YbR-20-zL1" secondAttribute="top" constant="100" id="bfp-oK-m0R"/>
-                            <constraint firstItem="IFk-gK-yGn" firstAttribute="centerX" secondItem="oQQ-FI-igF" secondAttribute="centerX" id="eMV-LO-RUg"/>
-                            <constraint firstItem="YbR-20-zL1" firstAttribute="bottom" secondItem="xDp-4g-hYs" secondAttribute="bottom" constant="20" id="eeP-B3-nfb"/>
-                            <constraint firstItem="rP3-lK-kvt" firstAttribute="top" secondItem="IFk-gK-yGn" secondAttribute="bottom" constant="30" id="fAm-Qw-Tmh"/>
-                            <constraint firstItem="Bg1-ZR-Hig" firstAttribute="top" secondItem="v2k-7G-Xhu" secondAttribute="bottom" constant="50" id="hpk-fo-gZ4"/>
-                            <constraint firstItem="rP3-lK-kvt" firstAttribute="leading" secondItem="YbR-20-zL1" secondAttribute="leading" constant="16" id="wey-If-7qD"/>
-                            <constraint firstItem="xDp-4g-hYs" firstAttribute="leading" secondItem="YbR-20-zL1" secondAttribute="leading" constant="16" id="xzy-df-Heh"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Добавить новое слово" id="4CK-0Y-yE3"/>
-                    <connections>
-                        <outlet property="newWordContextTF" destination="tOf-9u-YZc" id="8Da-ft-kfF"/>
-                        <outlet property="newWordTF" destination="rP3-lK-kvt" id="a4v-dk-rC8"/>
-                        <outlet property="translateNewWordTF" destination="v2k-7G-Xhu" id="m1r-cS-uUQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hgr-P6-Ayc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2563" y="-1544"/>
-        </scene>
         <!--Список слов-->
         <scene sceneID="bpR-c7-5as">
             <objects>
@@ -173,11 +67,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Список слов" id="MzC-fi-Ci9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6LS-36-STh">
-                            <connections>
-                                <segue destination="e9v-TB-zYr" kind="presentation" id="rrl-fz-GG1"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6LS-36-STh"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -612,24 +502,6 @@
             </objects>
             <point key="canvasLocation" x="554.96183206106866" y="-101.40845070422536"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="yFS-A9-C9Z">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="e9v-TB-zYr" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="YxG-vh-SrP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="uJv-7i-2k4" kind="relationship" relationship="rootViewController" id="Xq7-c3-LXB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gml-XG-suP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1568.7022900763359" y="-1543.661971830986"/>
-        </scene>
     </scenes>
     <resources>
         <image name="1661927971_j-37" width="1200" height="960"/>
@@ -645,9 +517,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
