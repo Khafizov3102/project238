@@ -164,7 +164,6 @@
                                 <connections>
                                     <outlet property="translateLabel" destination="104-Lc-pTW" id="thH-16-OIZ"/>
                                     <outlet property="wordLabel" destination="QWW-kQ-7ot" id="w6f-II-MvH"/>
-                                    <segue destination="0I4-8a-F9D" kind="show" identifier="segue" id="yLN-kp-NK7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -181,6 +180,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="0I4-8a-F9D" kind="show" identifier="segue" id="oa1-sw-sVh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WG7-t7-q8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
