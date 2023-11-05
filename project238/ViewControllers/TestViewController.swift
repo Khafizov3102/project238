@@ -8,7 +8,7 @@
 import UIKit
 
 final class TestViewController: UIViewController {
-
+    
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var checkWordTF: UITextField!
     @IBOutlet weak var checkButton: UIButton!
