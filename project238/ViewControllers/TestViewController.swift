@@ -26,7 +26,7 @@ final class TestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
+        setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов, которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
         
         setupUI()
     }
@@ -53,7 +53,7 @@ final class TestViewController: UIViewController {
     
     @IBAction func checkButtonPressed(_ sender: UIButton) {
         if checkButton.titleLabel?.text == "Пройти тест еще раз" {
-            setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
+            setupAlert(title: "Введите количество слов", message: "Необходимо ввести количество слов, которые будут участвовать в тесте: от 1 до \(words.count). При введении числа вне диапазона, число слов в тесте будет равно \(words.count)")
             
             setupButton(
                 button: checkButton,
@@ -82,14 +82,13 @@ final class TestViewController: UIViewController {
         currentWord = checkWordTF.text ?? ""
         
         if questionСounter < numberOfQuestions {
-            wordLabel.text = words[questionСounter].translation
+            wordLabel.text = words[questionСounter + 1].translation
             title = "\(questionСounter + 1)/\(numberOfQuestions)"
+            questionPV.setProgress(Float(questionСounter + 1) / Float(numberOfQuestions), animated: true)
         } else {
             checkWordTF.isHidden = true
             title = "Проверь себя"
         }
-        
-        questionPV.setProgress(Float(questionСounter + 1) / Float(numberOfQuestions), animated: true)
         
         checkWordTF.text = ""
         
